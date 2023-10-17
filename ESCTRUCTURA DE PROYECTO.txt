@@ -1,0 +1,36 @@
+
+Guardar todo en carpeta con la siguiente estructura
+nombre de carpeta raiz: proyecto
+que contrendra:
+
+carpeta (documentos):
+	mer.mdj (modelo de entidad y relaciones)  --X
+	informe.docs ---X
+	diccionario.sfx
+	mer.png (modelo de entidad y relaciones) ---X
+
+carpeta (stripts):
+	database.sql ---X
+	datos de prueba.sql ---X
+
+		/*
+		scripts creacion base de datos
+		-- descripcion y comentarios --
+		fecha:
+		autor/es:
+		/*
+
+		create database....
+		use database....
+		create table....
+
+		(incluir insert, uptdate, select)
+	
+carpeta (sp):
+	sp_insertar_producto.sql
+		/*
+		sp_insertar_producto
+		-- comentario de la funcion o que hace --
+		fecha:
+		autor/es:
+		/*

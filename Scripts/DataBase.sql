@@ -1,0 +1,143 @@
+-- MODELO ENTIDADES RELACIONADAS --
+
+-- DATABASE --
+CREATE DATABASE IF NOT EXISTS MER;
+SHOW DATABASES;
+USE MER;
+
+-- TABLAS --
+
+-- DUEÑ@ / ADMINISTRADOR/A  --
+CREATE TABLE IF NOT EXISTS Dueñ@ (
+Nombre VARCHAR (50) PRIMARY KEY,
+Apellido VARCHAR (50),
+Contacto VARCHAR (50),
+Direccion VARCHAR (100),
+Telefono VARCHAR (12),
+Email VARCHAR (60),
+Horario DATE,
+Fecha_ingreso DATE
+);
+
+-- SOCIO COMUNITARIO --
+CREATE TABLE IF NOT EXISTS Socio_comunitario (
+Nombre_de_local VARCHAR(50),
+Direccion VARCHAR(100),
+Telefono VARCHAR(12),
+Email VARCHAR(60),
+Dueño VARCHAR(50)
+);
+
+-- SUCURSALES --
+CREATE TABLE IF NOT EXISTS Sucursales (
+Nombre VARCHAR(50),
+Ubicacion VARCHAR(50),
+Telefono VARCHAR(12)
+);
+
+-- EMPLEADOS --
+CREATE TABLE IF NOT EXISTS Empleados (
+ID_Empleado INT AUTO_INCREMENT PRIMARY KEY,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+Direccion VARCHAR(100),
+Telefono VARCHAR(12),
+Email VARCHAR(60),
+Horario DATE,
+Fecha_ingreso DATE,
+Puesto VARCHAR(50)
+);
+
+-- EQUIPO --
+CREATE TABLE IF NOT EXISTS Equipo (
+ID_Equipo INT AUTO_INCREMENT,
+Nombre VARCHAR(50),
+Descripcion VARCHAR(50)
+);
+
+-- PROVEEDOR --
+CREATE TABLE IF NOT EXISTS Proveedor (
+ID_Proveedor INT AUTO_INCREMENT,
+Nombre VARCHAR(50),
+Teleno VARCHAR(12),
+Direccion VARCHAR(100),
+Gmail VARCHAR(60)
+);
+
+-- STOCK --
+CREATE TABLE IF NOT EXISTS Stock (
+ID_Producto INT AUTO_INCREMENT,
+Nombre VARCHAR(50),
+Descripcion VARCHAR(300),
+Fecha_ingreso DATE
+);
+
+-- PRODUCTO --
+CREATE TABLE IF NOT EXISTS Producto (
+ID_Libro INT AUTO_INCREMENT,
+Nombre VARCHAR(50),
+Descripcion VARCHAR(300),
+Fecha_Ingreso DATE
+);
+
+-- VENTA --
+CREATE TABLE IF NOT EXISTS Venta (
+ID_Venta INT AUTO_INCREMENT,
+Fecha DATE,
+Cliente INT,
+Total DECIMAL(10,2)
+);
+
+-- CLIENTE --
+CREATE TABLE IF NOT EXISTS Cliente (
+ID_Cliente INT AUTO_INCREMENT,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+Telefono VARCHAR(12),
+Gmail VARCHAR(60)
+);
+
+-- PEDIDO --
+CREATE TABLE IF NOT EXISTS Pedido (
+Cliente VARCHAR(50),
+Direccion VARCHAR(50),
+Telefono VARCHAR(12),
+Libro VARCHAR(50)
+);
+
+-- BOLETA --
+CREATE TABLE IF NOT EXISTS Boleta (
+ID_Boleta INT AUTO_INCREMENT,
+ID_Venta INT AUTO_INCREMENT,
+Fecha_emision DATETIME
+);
+
+-- GASTOS --
+CREATE TABLE IF NOT EXISTS Gastos (
+ID_Gastos INT AUTO_INCREMENT,
+Monto DECIMAL(10,2),
+Tipo VARCHAR(30),
+Fecha DATE
+);
+
+-- GANANCIAS --
+CREATE TABLE IF NOT EXISTS Ganancias (
+ID_Ganancias INT AUTO_INCREMENT,
+Monto DECIMAL(10,2),
+Fecha DATE
+);
+
+-- GASTOS --
+CREATE TABLE IF NOT EXISTS Gastos (
+ID_Gastos INT AUTO_INCREMENT,
+Monto DECIMAL(10,2),
+Tipo VARCHAR (30),
+Fecha DATE
+);
+
+-- GANANCIAS --
+CREATE TABLE IF NOT EXISTS Ganancias (
+ID_Ganancias INT AUTO_INCREMENT,
+Monto DECIMAL(10,2),
+Fecha DATE
+);
